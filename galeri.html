@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeri & Video — Çobanoğlu Kebap</title>
+  <meta name="description" content="Mekânımızdan, mutfağımızdan ve közün başından fotoğraflar ile tanıtım videomuz." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-mark">Çobanoğlu<span>Kebap · Est. 1974</span></div>
+    <div class="loader-bar"><i></i></div>
+    <div class="loader-pct">0%</div>
+  </div>
+
+  <header class="nav">
+    <div class="container">
+      <a href="index.html" class="brand"><b>Çoban</b>oğlu<em data-i18n="brand.tag">Kebap Evi</em></a>
+      <nav class="nav-links" aria-label="Ana menü">
+        <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+        <a href="menu.html" data-i18n="nav.menu">Menü</a>
+        <a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+        <a href="galeri.html" data-i18n="nav.gallery">Galeri</a>
+        <a href="iletisim.html" data-i18n="nav.contact">İletişim</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle" role="group" aria-label="Dil / Language">
+          <button data-lang-btn="tr">TR</button>
+          <button data-lang-btn="en">EN</button>
+        </div>
+        <a href="tel:+902121234567" class="btn btn-primary" data-i18n="nav.reserve">Bizi Arayın</a>
+        <button class="nav-toggle" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow center" data-i18n="gallery.eyebrow">Objektiften</span>
+      <h1 class="display" data-i18n="gallery.title">Galeri & Video</h1>
+      <p class="lead" data-i18n="gallery.sub">Mekânımızdan, mutfağımızdan ve közün başından kareler.</p>
+      <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">Anasayfa</a> / <span data-i18n="nav.gallery">Galeri</span></div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="container" style="padding:96px 24px 64px">
+    <div class="section-head">
+      <span class="eyebrow center" data-i18n="gallery.video.title">Mutfağın Kalbinden</span>
+      <h2 class="h2" data-i18n="gallery.video.sub">Ateşin başındaki bir günü izleyin.</h2>
+    </div>
+    <div class="video-block" data-reveal>
+      <!-- Gerçek video: assets/video/tanitim.mp4 · Poster: assets/img/video-poster.jpg -->
+      <video preload="none" poster="assets/img/video-poster.jpg" playsinline>
+        <source src="assets/video/tanitim.mp4" type="video/mp4" />
+      </video>
+      <div class="video-poster">
+        <img src="assets/img/video-poster.jpg" alt="Tanıtım videosu" data-label="Video" />
+        <button class="play-btn" aria-label="Videoyu oynat"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTOS -->
+  <section class="container" style="padding:32px 24px 96px">
+    <div class="section-head">
+      <span class="eyebrow center" data-i18n="gallery.photos">Fotoğraflar</span>
+    </div>
+    <div class="gallery-grid" data-stagger>
+      <figure class="wide"><img src="assets/img/g1.jpg" alt="Köz ateşi" data-label="Köz" /><figcaption>Köz Ateşi</figcaption></figure>
+      <figure class="tall"><img src="assets/img/g2.jpg" alt="Usta iş başında" data-label="Usta" /><figcaption>Usta İş Başında</figcaption></figure>
+      <figure><img src="assets/img/g3.jpg" alt="Adana kebap" data-label="Adana" /><figcaption>Adana Kebap</figcaption></figure>
+      <figure><img src="assets/img/g4.jpg" alt="Mekân" data-label="Mekan" /><figcaption>Mekânımız</figcaption></figure>
+      <figure><img src="assets/img/g5.jpg" alt="Mezeler" data-label="Meze" /><figcaption>Mezeler</figcaption></figure>
+      <figure class="tall"><img src="assets/img/g6.jpg" alt="Kuzu şiş" data-label="Kuzu Şiş" /><figcaption>Kuzu Şiş</figcaption></figure>
+      <figure><img src="assets/img/g7.jpg" alt="Baklava" data-label="Baklava" /><figcaption>Baklava</figcaption></figure>
+      <figure class="wide"><img src="assets/img/g8.jpg" alt="Sofra" data-label="Sofra" /><figcaption>Dost Sofrası</figcaption></figure>
+      <figure><img src="assets/img/g9.jpg" alt="Detay" data-label="Detay" /><figcaption>Detaylar</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lb-close" role="button" aria-label="Kapat">&times;</span>
+    <span class="lb-nav lb-prev" role="button" aria-label="Önceki">&#8249;</span>
+    <img src="" alt="" />
+    <span class="lb-nav lb-next" role="button" aria-label="Sonraki">&#8250;</span>
+  </div>
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-inner" data-reveal>
+        <h2 class="h2" data-i18n="cta.title">Bu Akşam Köz Ateşinin Başına Buyurun</h2>
+        <p data-i18n="cta.sub">Rezervasyon için bizi arayabilir ya da doğrudan uğrayabilirsiniz. Sofra hazır.</p>
+        <div class="hero-actions">
+          <a href="tel:+902121234567" class="btn btn-primary" data-i18n="cta.call">Hemen Ara</a>
+          <a href="iletisim.html" class="btn btn-ghost" data-i18n="cta.dir">Yol Tarifi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand"><b>Çoban</b>oğlu<em>1974</em></div>
+          <p class="about" data-i18n="foot.about">1974'ten bu yana odun ateşinde, ustanın elinden gelen gerçek kebap lezzeti.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="foot.explore">Keşfet</h4>
+          <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+          <a href="menu.html" data-i18n="nav.menu">Menü</a>
+          <a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+          <a href="galeri.html" data-i18n="nav.gallery">Galeri</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="foot.contact">İletişim</h4>
+          <a href="tel:+902121234567">+90 212 123 45 67</a>
+          <a href="mailto:info@cobanoglukebap.com">info@cobanoglukebap.com</a>
+          <p>Merkez Mah. Lezzet Cad. No:1<br/>İstanbul</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="foot.hours">Saatler</h4>
+          <p>Pzt–Cum · 11:00 – 23:00</p>
+          <p>Cmt · 11:00 – 24:00</p>
+          <p>Paz · 12:00 – 23:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Çobanoğlu Kebap. <span data-i18n="foot.rights">Tüm hakları saklıdır.</span></span>
+        <span data-i18n="foot.madeby">Sevgiyle hazırlandı.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

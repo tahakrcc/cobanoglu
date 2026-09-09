@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menü — Çobanoğlu Kebap</title>
+  <meta name="description" content="Çobanoğlu Kebap menüsü: Adana, kuzu şiş, beyti, başlangıçlar ve tatlılar. Köz ateşinden gelen zengin seçkiler." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-mark">Çobanoğlu<span>Kebap · Est. 1974</span></div>
+    <div class="loader-bar"><i></i></div>
+    <div class="loader-pct">0%</div>
+  </div>
+
+  <header class="nav">
+    <div class="container">
+      <a href="index.html" class="brand"><b>Çoban</b>oğlu<em data-i18n="brand.tag">Kebap Evi</em></a>
+      <nav class="nav-links" aria-label="Ana menü">
+        <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+        <a href="menu.html" data-i18n="nav.menu">Menü</a>
+        <a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+        <a href="galeri.html" data-i18n="nav.gallery">Galeri</a>
+        <a href="iletisim.html" data-i18n="nav.contact">İletişim</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle" role="group" aria-label="Dil / Language">
+          <button data-lang-btn="tr">TR</button>
+          <button data-lang-btn="en">EN</button>
+        </div>
+        <a href="tel:+902121234567" class="btn btn-primary" data-i18n="nav.reserve">Bizi Arayın</a>
+        <button class="nav-toggle" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow center" data-i18n="menu.eyebrow">Lezzet Listesi</span>
+      <h1 class="display" data-i18n="menu.title">Menümüz</h1>
+      <p class="lead" data-i18n="menu.sub">Köz ateşinden gelen zengin seçkiler. Afiyet olsun.</p>
+      <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">Anasayfa</a> / <span data-i18n="nav.menu">Menü</span></div>
+    </div>
+  </section>
+
+  <section class="container" style="padding:96px 24px">
+    <div class="menu-filters">
+      <button data-filter="all" class="active" data-i18n="menu.f.all">Tümü</button>
+      <button data-filter="kebap" data-i18n="menu.f.kebap">Kebaplar</button>
+      <button data-filter="izgara" data-i18n="menu.f.izgara">Izgaralar</button>
+      <button data-filter="baslangic" data-i18n="menu.f.baslangic">Başlangıçlar</button>
+      <button data-filter="tatli" data-i18n="menu.f.tatli">Tatlılar</button>
+    </div>
+
+    <div class="menu-list" data-stagger>
+      <!-- KEBAPLAR -->
+      <div class="menu-item" data-cat="kebap">
+        <img src="assets/img/adana.jpg" alt="Adana Kebap" data-label="Adana" />
+        <div class="mi-body"><div class="mi-top"><h4 data-i18n="dish.1.t">Adana Kebap</h4><span class="dots"></span><span class="mi-price">₺320</span></div><p data-i18n="dish.1.d">Zırhla çekilmiş dana, acılı harman, közde nar gibi.</p></div>
+      </div>
+      <div class="menu-item" data-cat="kebap">
+        <img src="assets/img/urfa.jpg" alt="Urfa Kebap" data-label="Urfa" />
+        <div class="mi-body"><div class="mi-top"><h4>Urfa Kebap</h4><span class="dots"></span><span class="mi-price">₺320</span></div><p data-i18n-placeholder>Acısız, yumuşak dokulu, közde pişmiş dana kebap.</p></div>
+      </div>
+      <div class="menu-item" data-cat="kebap">
+        <img src="assets/img/beyti.jpg" alt="Beyti Sarma" data-label="Beyti" />
+        <div class="mi-body"><div class="mi-top"><h4 data-i18n="dish.3.t">Beyti Sarma</h4><span class="dots"></span><span class="mi-price">₺360</span></div><p data-i18n="dish.3.d">Yufkaya sarılı kebap, domates sos ve yoğurt eşliğinde.</p></div>
+      </div>
+      <div class="menu-item" data-cat="kebap">
+        <img src="assets/img/patlicanli.jpg" alt="Patlıcanlı Kebap" data-label="Patlıcan" />
+        <div class="mi-body"><div class="mi-top"><h4>Patlıcanlı Kebap</h4><span class="dots"></span><span class="mi-price">₺340</span></div><p>Közlenmiş patlıcan ve el yapımı kebap dizimi.</p></div>
+      </div>
+
+      <!-- IZGARALAR -->
+      <div class="menu-item" data-cat="izgara">
+        <img src="assets/img/kuzu-sis.jpg" alt="Kuzu Şiş" data-label="Kuzu Şiş" />
+        <div class="mi-body"><div class="mi-top"><h4 data-i18n="dish.2.t">Kuzu Şiş</h4><span class="dots"></span><span class="mi-price">₺380</span></div><p data-i18n="dish.2.d">Marine edilmiş kuzu bonfile, sac ekmeği ve közlenmiş sebze.</p></div>
+      </div>
+      <div class="menu-item" data-cat="izgara">
+        <img src="assets/img/tavuk-sis.jpg" alt="Tavuk Şiş" data-label="Tavuk Şiş" />
+        <div class="mi-body"><div class="mi-top"><h4>Tavuk Şiş</h4><span class="dots"></span><span class="mi-price">₺280</span></div><p>Yoğurt ve baharatla marine edilmiş közde tavuk.</p></div>
+      </div>
+      <div class="menu-item" data-cat="izgara">
+        <img src="assets/img/pirzola.jpg" alt="Kuzu Pirzola" data-label="Pirzola" />
+        <div class="mi-body"><div class="mi-top"><h4>Kuzu Pirzola</h4><span class="dots"></span><span class="mi-price">₺450</span></div><p>Közde mühürlenmiş, sulu ve yumuşacık kuzu pirzola.</p></div>
+      </div>
+      <div class="menu-item" data-cat="izgara">
+        <img src="assets/img/karisik.jpg" alt="Karışık Izgara" data-label="Karışık" />
+        <div class="mi-body"><div class="mi-top"><h4>Karışık Izgara <span class="badge-v">2 Kişilik</span></h4><span class="dots"></span><span class="mi-price">₺720</span></div><p>Adana, kuzu şiş, tavuk ve pirzoladan zengin tabak.</p></div>
+      </div>
+
+      <!-- BAŞLANGIÇLAR -->
+      <div class="menu-item" data-cat="baslangic">
+        <img src="assets/img/mezeler.jpg" alt="Meze Tabağı" data-label="Meze" />
+        <div class="mi-body"><div class="mi-top"><h4>Meze Tabağı</h4><span class="dots"></span><span class="mi-price">₺180</span></div><p>Humus, haydari, közlenmiş biber ve acılı ezme.</p></div>
+      </div>
+      <div class="menu-item" data-cat="baslangic">
+        <img src="assets/img/mercimek.jpg" alt="Mercimek Çorbası" data-label="Çorba" />
+        <div class="mi-body"><div class="mi-top"><h4>Mercimek Çorbası</h4><span class="dots"></span><span class="mi-price">₺90</span></div><p>Tereyağı ve nane ile geleneksel kırmızı mercimek.</p></div>
+      </div>
+      <div class="menu-item" data-cat="baslangic">
+        <img src="assets/img/icli-kofte.jpg" alt="İçli Köfte" data-label="İçli Köfte" />
+        <div class="mi-body"><div class="mi-top"><h4>İçli Köfte</h4><span class="dots"></span><span class="mi-price">₺140</span></div><p>El yapımı, cevizli ve baharatlı iç harcıyla.</p></div>
+      </div>
+
+      <!-- TATLILAR -->
+      <div class="menu-item" data-cat="tatli">
+        <img src="assets/img/baklava.jpg" alt="Fıstıklı Baklava" data-label="Baklava" />
+        <div class="mi-body"><div class="mi-top"><h4>Fıstıklı Baklava</h4><span class="dots"></span><span class="mi-price">₺160</span></div><p>Antep fıstığı bol, el açması tel tel baklava.</p></div>
+      </div>
+      <div class="menu-item" data-cat="tatli">
+        <img src="assets/img/kunefe.jpg" alt="Künefe" data-label="Künefe" />
+        <div class="mi-body"><div class="mi-top"><h4>Künefe</h4><span class="dots"></span><span class="mi-price">₺150</span></div><p>Sıcak servis, peynirli, kaymak eşliğinde.</p></div>
+      </div>
+      <div class="menu-item" data-cat="tatli">
+        <img src="assets/img/dondurma.jpg" alt="Maraş Dondurması" data-label="Dondurma" />
+        <div class="mi-body"><div class="mi-top"><h4>Maraş Dondurması</h4><span class="dots"></span><span class="mi-price">₺110</span></div><p>Yoğun kıvamlı, keçi sütünden gerçek Maraş usulü.</p></div>
+      </div>
+    </div>
+
+    <p class="center lead" style="margin-top:48px;font-size:0.95rem" data-i18n="menu.note">Fiyatlar günlük piyasaya göre değişebilir. Detaylı bilgi için bizi arayın.</p>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-inner" data-reveal>
+        <h2 class="h2" data-i18n="cta.title">Bu Akşam Köz Ateşinin Başına Buyurun</h2>
+        <p data-i18n="cta.sub">Rezervasyon için bizi arayabilir ya da doğrudan uğrayabilirsiniz. Sofra hazır.</p>
+        <div class="hero-actions">
+          <a href="tel:+902121234567" class="btn btn-primary" data-i18n="cta.call">Hemen Ara</a>
+          <a href="iletisim.html" class="btn btn-ghost" data-i18n="cta.dir">Yol Tarifi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand"><b>Çoban</b>oğlu<em>1974</em></div>
+          <p class="about" data-i18n="foot.about">1974'ten bu yana odun ateşinde, ustanın elinden gelen gerçek kebap lezzeti.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="foot.explore">Keşfet</h4>
+          <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+          <a href="menu.html" data-i18n="nav.menu">Menü</a>
+          <a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+          <a href="galeri.html" data-i18n="nav.gallery">Galeri</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="foot.contact">İletişim</h4>
+          <a href="tel:+902121234567">+90 212 123 45 67</a>
+          <a href="mailto:info@cobanoglukebap.com">info@cobanoglukebap.com</a>
+          <p>Merkez Mah. Lezzet Cad. No:1<br/>İstanbul</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="foot.hours">Saatler</h4>
+          <p>Pzt–Cum · 11:00 – 23:00</p>
+          <p>Cmt · 11:00 – 24:00</p>
+          <p>Paz · 12:00 – 23:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Çobanoğlu Kebap. <span data-i18n="foot.rights">Tüm hakları saklıdır.</span></span>
+        <span data-i18n="foot.madeby">Sevgiyle hazırlandı.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

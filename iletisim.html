@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İletişim & Konum — Çobanoğlu Kebap</title>
+  <meta name="description" content="Adres, telefon, çalışma saatleri ve yol tarifi. Sizi köz ateşinin başında ağırlamaktan mutluluk duyarız." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-mark">Çobanoğlu<span>Kebap · Est. 1974</span></div>
+    <div class="loader-bar"><i></i></div>
+    <div class="loader-pct">0%</div>
+  </div>
+
+  <header class="nav">
+    <div class="container">
+      <a href="index.html" class="brand"><b>Çoban</b>oğlu<em data-i18n="brand.tag">Kebap Evi</em></a>
+      <nav class="nav-links" aria-label="Ana menü">
+        <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+        <a href="menu.html" data-i18n="nav.menu">Menü</a>
+        <a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+        <a href="galeri.html" data-i18n="nav.gallery">Galeri</a>
+        <a href="iletisim.html" data-i18n="nav.contact">İletişim</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle" role="group" aria-label="Dil / Language">
+          <button data-lang-btn="tr">TR</button>
+          <button data-lang-btn="en">EN</button>
+        </div>
+        <a href="tel:+902121234567" class="btn btn-primary" data-i18n="nav.reserve">Bizi Arayın</a>
+        <button class="nav-toggle" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow center" data-i18n="contact.eyebrow">Bize Ulaşın</span>
+      <h1 class="display" data-i18n="contact.title">Konum & İletişim</h1>
+      <p class="lead" data-i18n="contact.sub">Sizi köz ateşinin başında ağırlamaktan mutluluk duyarız.</p>
+      <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">Anasayfa</a> / <span data-i18n="nav.contact">İletişim</span></div>
+    </div>
+  </section>
+
+  <section class="container" style="padding:96px 24px">
+    <div class="contact-grid">
+      <!-- INFO -->
+      <div class="info-card" data-reveal>
+        <h3 class="h3" style="margin-bottom:8px" data-i18n="contact.info">İletişim Bilgileri</h3>
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.4-7-11a7 7 0 0 1 14 0c0 4.6-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+          <div><h4 data-i18n="contact.addr">Adres</h4><p>Merkez Mah. Lezzet Cad. No:1<br/>Şişli / İstanbul</p></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></div>
+          <div><h4 data-i18n="contact.phone">Telefon</h4><p><a href="tel:+902121234567">+90 212 123 45 67</a></p></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+          <div><h4 data-i18n="contact.mail">E-posta</h4><p><a href="mailto:info@cobanoglukebap.com">info@cobanoglukebap.com</a></p></div>
+        </div>
+        <div class="info-row">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div style="flex:1">
+            <h4 data-i18n="contact.hours">Çalışma Saatleri</h4>
+            <div class="hours-row"><span data-i18n="contact.h.week">Pazartesi – Cuma</span><span>11:00 – 23:00</span></div>
+            <div class="hours-row"><span data-i18n="contact.h.sat">Cumartesi</span><span>11:00 – 24:00</span></div>
+            <div class="hours-row"><span data-i18n="contact.h.sun">Pazar</span><span>12:00 – 23:00</span></div>
+          </div>
+        </div>
+
+        <h4 style="margin-top:24px;font-family:var(--font-body);font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-muted)" data-i18n="contact.follow">Bizi Takip Edin</h4>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-3.5H13V8.3c0-1 .3-1.7 1.8-1.7H17V3.5A25 25 0 0 0 14.7 3C12.3 3 10.7 4.5 10.7 7.2v2.3H8V13h2.7v9H13Z"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-6.6 7.6L21.7 21H16l-4.4-5.7L6.5 21H3.5l7-8.1L2.6 3h5.8l4 5.3L17.5 3Zm-1 16h1.6L7.6 4.7H5.9L16.5 19Z"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1a13 13 0 0 1-5.8-5.1c-.4-.6-.9-1.4-.9-2.7 0-1.2.6-1.8.9-2 .2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2 0 .4-.1.6l-.4.5c-.2.2-.3.3-.1.6.5.9 1.1 1.5 1.9 2 .3.2.5.2.7-.1l.6-.7c.2-.2.3-.2.6-.1l1.8.9c.2.1.4.2.4.3.1.2.1.7-.1 1.4Z"/></svg></a>
+        </div>
+      </div>
+
+      <!-- MAP -->
+      <div class="map-wrap" data-reveal>
+        <iframe title="Çobanoğlu Kebap Konum" src="https://www.google.com/maps?q=Sisli+Istanbul&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="center" style="margin-top:48px">
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Sisli+Istanbul" target="_blank" rel="noopener" class="btn btn-gold" data-i18n="contact.dir">Yol Tarifi Al</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand"><b>Çoban</b>oğlu<em>1974</em></div>
+          <p class="about" data-i18n="foot.about">1974'ten bu yana odun ateşinde, ustanın elinden gelen gerçek kebap lezzeti.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="foot.explore">Keşfet</h4>
+          <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+          <a href="menu.html" data-i18n="nav.menu">Menü</a>
+          <a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+          <a href="galeri.html" data-i18n="nav.gallery">Galeri</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="foot.contact">İletişim</h4>
+          <a href="tel:+902121234567">+90 212 123 45 67</a>
+          <a href="mailto:info@cobanoglukebap.com">info@cobanoglukebap.com</a>
+          <p>Merkez Mah. Lezzet Cad. No:1<br/>İstanbul</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="foot.hours">Saatler</h4>
+          <p>Pzt–Cum · 11:00 – 23:00</p>
+          <p>Cmt · 11:00 – 24:00</p>
+          <p>Paz · 12:00 – 23:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Çobanoğlu Kebap. <span data-i18n="foot.rights">Tüm hakları saklıdır.</span></span>
+        <span data-i18n="foot.madeby">Sevgiyle hazırlandı.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

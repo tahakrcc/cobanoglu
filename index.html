@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Çobanoğlu Kebap — Odun Ateşinde Gerçek Lezzet</title>
+  <meta name="description" content="1974'ten bu yana odun ateşinde, ustanın elinden gelen gerçek kebap lezzeti. Adana, kuzu şiş, beyti ve daha fazlası." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader">
+    <div class="loader-mark">Çobanoğlu<span>Kebap · Est. 1974</span></div>
+    <div class="loader-bar"><i></i></div>
+    <div class="loader-pct">0%</div>
+  </div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <div class="container">
+      <a href="index.html" class="brand"><b>Çoban</b>oğlu<em data-i18n="brand.tag">Kebap Evi</em></a>
+      <nav class="nav-links" aria-label="Ana menü">
+        <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+        <a href="menu.html" data-i18n="nav.menu">Menü</a>
+        <a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+        <a href="galeri.html" data-i18n="nav.gallery">Galeri</a>
+        <a href="iletisim.html" data-i18n="nav.contact">İletişim</a>
+      </nav>
+      <div class="nav-right">
+        <div class="lang-toggle" role="group" aria-label="Dil / Language">
+          <button data-lang-btn="tr">TR</button>
+          <button data-lang-btn="en">EN</button>
+        </div>
+        <a href="tel:+902121234567" class="btn btn-primary" data-i18n="nav.reserve">Bizi Arayın</a>
+        <button class="nav-toggle" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-media">
+      <!-- Gerçek görsel: assets/img/hero.jpg (yoksa placeholder gösterilir) -->
+      <img src="assets/img/hero.jpg" alt="Köz ateşinde pişen kebap" data-label="Hero" />
+    </div>
+    <div class="container">
+      <div class="hero-inner">
+        <span class="eyebrow" data-i18n="hero.eyebrow">1974'ten Bu Yana Odun Ateşinde</span>
+        <h1 class="display" data-i18n="hero.title">Ustanın Elinden, <em>Közün</em> Sofraya</h1>
+        <p data-i18n="hero.sub">Anadolu'nun köklü lezzet geleneğini, seçkin etleri ve açık ateşin sıcaklığını modern bir sofrada buluşturuyoruz.</p>
+        <div class="hero-actions">
+          <a href="menu.html" class="btn btn-primary" data-i18n="hero.cta1">Menüyü Keşfet</a>
+          <a href="iletisim.html" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,0.5)" data-i18n="hero.cta2">Yol Tarifi Al</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-badges">
+      <div class="hero-badge"><b>50+</b><small data-i18n="hero.badge1">Yıllık Ustalık</small></div>
+      <div class="hero-badge"><b>40+</b><small data-i18n="hero.badge2">İmza Lezzet</small></div>
+      <div class="hero-badge"><b>120K</b><small data-i18n="hero.badge3">Memnun Misafir</small></div>
+    </div>
+    <div class="scroll-cue"><div class="mouse"></div><span data-i18n="hero.scroll">Kaydır</span></div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow center" data-i18n="feat.eyebrow">Neden Çobanoğlu</span>
+        <h2 class="h2" data-i18n="feat.title">Bir Lokmada Fark Edeceğiniz Kalite</h2>
+      </div>
+      <div class="feature-grid" data-stagger>
+        <article class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3-1 4-1 6a3 3 0 0 0 6 0c0-1-.5-2-1-3 2 1 4 4 4 8a8 8 0 1 1-16 0c0-3 2-5 3-7 1 2 2 2 3 0 .5-1 .5-2-1-4Z"/></svg>
+          </div>
+          <h3 data-i18n="feat.1.t">Odun Ateşi Közü</h3>
+          <p data-i18n="feat.1.d">Her kebap, meşe odununun közünde, ustaların sabırlı elinde pişer. Gaz yok, aceleye yer yok.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 0 0 9-9 9 9 0 0 0-9-9 9 9 0 0 0-9 9c0 2 .6 3.5 1.5 5"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3 data-i18n="feat.2.t">Günlük Taze Et</h3>
+          <p data-i18n="feat.2.d">Seçkin çiftliklerden gelen etler her sabah özenle ayıklanır, elde yoğrulur ve aynı gün servis edilir.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h10l4 4v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 8h6M8 12h8M8 16h5"/></svg>
+          </div>
+          <h3 data-i18n="feat.3.t">Köklü Reçeteler</h3>
+          <p data-i18n="feat.3.d">Üç kuşaktır değişmeyen baharat harmanı ve el emeği; her tabakta aynı özenli miras.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STORY ===== -->
+  <section class="container">
+    <div class="split">
+      <div class="split-media" data-reveal>
+        <img src="assets/img/usta.jpg" alt="Ateşin başındaki usta" data-label="Usta" />
+        <div class="frame"></div>
+        <div class="exp-badge"><b data-count="50">0</b><span data-i18n="story.exp">Yıllık Tecrübe</span></div>
+      </div>
+      <div class="split-text" data-reveal>
+        <span class="eyebrow" data-i18n="story.eyebrow">Hikayemiz</span>
+        <h2 class="h2" data-i18n="story.title">Yarım Asırlık Bir <span class="text-accent">Lezzet Yolculuğu</span></h2>
+        <p data-i18n="story.p1">Çobanoğlu, 1974 yılında küçük bir ocakbaşıyla yola çıktı. Dedemizin köz üzerinde çevirdiği ilk şişten bugüne, tek bir şey hiç değişmedi: işi hakkını vererek yapmak.</p>
+        <p data-i18n="story.p2">Bugün üçüncü kuşak olarak aynı ateşi, aynı özeni ve aynı misafirperverliği sürdürüyoruz. Her misafirimiz bizim için sofraya davet ettiğimiz bir dost.</p>
+        <p class="signature" data-i18n="story.sign">— Çobanoğlu Ailesi</p>
+        <a href="hakkimizda.html" class="btn btn-ghost" style="margin-top:20px" data-i18n="story.more">Hikayemizin Devamı</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIGNATURE DISHES ===== -->
+  <section class="dishes">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow center" data-i18n="dish.eyebrow">İmza Lezzetler</span>
+        <h2 class="h2" data-i18n="dish.title">Sofranın Baş Tacı Tabaklar</h2>
+        <p class="lead" data-i18n="dish.sub">En çok sevilen, ustaların gururla sunduğu seçkiler.</p>
+      </div>
+      <div class="dish-grid" data-stagger>
+        <article class="dish-card">
+          <div class="dish-thumb"><span class="dish-tag" data-i18n="dish.tag.popular">En Sevilen</span><img src="assets/img/adana.jpg" alt="Adana Kebap" data-label="Adana" /></div>
+          <div class="dish-body"><h3><span data-i18n="dish.1.t">Adana Kebap</span><span class="dish-price">₺320</span></h3><p data-i18n="dish.1.d">Zırhla çekilmiş dana, acılı harman, közde nar gibi.</p></div>
+        </article>
+        <article class="dish-card">
+          <div class="dish-thumb"><span class="dish-tag" data-i18n="dish.tag.chef">Şefin Seçimi</span><img src="assets/img/kuzu-sis.jpg" alt="Kuzu Şiş" data-label="Kuzu Şiş" /></div>
+          <div class="dish-body"><h3><span data-i18n="dish.2.t">Kuzu Şiş</span><span class="dish-price">₺380</span></h3><p data-i18n="dish.2.d">Marine edilmiş kuzu bonfile, sac ekmeği ve közlenmiş sebze.</p></div>
+        </article>
+        <article class="dish-card">
+          <div class="dish-thumb"><span class="dish-tag" data-i18n="dish.tag.new">Yeni</span><img src="assets/img/beyti.jpg" alt="Beyti Sarma" data-label="Beyti" /></div>
+          <div class="dish-body"><h3><span data-i18n="dish.3.t">Beyti Sarma</span><span class="dish-price">₺360</span></h3><p data-i18n="dish.3.d">Yufkaya sarılı kebap, domates sos ve yoğurt eşliğinde.</p></div>
+        </article>
+      </div>
+      <div class="center" style="margin-top:48px">
+        <a href="menu.html" class="btn btn-gold" data-i18n="dish.all">Tüm Menüyü Gör</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid" data-stagger>
+        <div class="stat"><b><span data-count="50">0</span><span class="plus">+</span></b><span data-i18n="stat.1">Yıllık Tecrübe</span></div>
+        <div class="stat"><b><span data-count="40">0</span><span class="plus">+</span></b><span data-i18n="stat.2">Günlük Taze Menü</span></div>
+        <div class="stat"><b><span data-count="120000">0</span><span class="plus">+</span></b><span data-i18n="stat.3">Mutlu Misafir</span></div>
+        <div class="stat"><b><span data-count="8">0</span></b><span data-i18n="stat.4">Usta Şef</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-inner" data-reveal>
+        <h2 class="h2" data-i18n="cta.title">Bu Akşam Köz Ateşinin Başına Buyurun</h2>
+        <p data-i18n="cta.sub">Rezervasyon için bizi arayabilir ya da doğrudan uğrayabilirsiniz. Sofra hazır.</p>
+        <div class="hero-actions">
+          <a href="tel:+902121234567" class="btn btn-primary" data-i18n="cta.call">Hemen Ara</a>
+          <a href="iletisim.html" class="btn btn-ghost" data-i18n="cta.dir">Yol Tarifi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand"><b>Çoban</b>oğlu<em>1974</em></div>
+          <p class="about" data-i18n="foot.about">1974'ten bu yana odun ateşinde, ustanın elinden gelen gerçek kebap lezzeti.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="foot.explore">Keşfet</h4>
+          <a href="index.html" data-i18n="nav.home">Anasayfa</a>
+          <a href="menu.html" data-i18n="nav.menu">Menü</a>
+          <a href="hakkimizda.html" data-i18n="nav.about">Hakkımızda</a>
+          <a href="galeri.html" data-i18n="nav.gallery">Galeri</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="foot.contact">İletişim</h4>
+          <a href="tel:+902121234567">+90 212 123 45 67</a>
+          <a href="mailto:info@cobanoglukebap.com">info@cobanoglukebap.com</a>
+          <p>Merkez Mah. Lezzet Cad. No:1<br/>İstanbul</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="foot.hours">Saatler</h4>
+          <p>Pzt–Cum · 11:00 – 23:00</p>
+          <p>Cmt · 11:00 – 24:00</p>
+          <p>Paz · 12:00 – 23:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Çobanoğlu Kebap. <span data-i18n="foot.rights">Tüm hakları saklıdır.</span></span>
+        <span data-i18n="foot.madeby">Sevgiyle hazırlandı.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
