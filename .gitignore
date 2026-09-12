@@ -2,3 +2,9 @@
 node_modules/
 .vercel
 *.log
+
+# Gizli — asla commit edilmez
+SECRETS.local.md
+*.local
+.env
+.env.*
