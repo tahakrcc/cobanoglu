@@ -134,9 +134,13 @@ section { position: relative; }
 .nav.scrolled::before { opacity: 1; border-bottom-color: var(--color-border); }
 .nav .container { display: flex; align-items: center; justify-content: space-between; }
 
-.brand { display: flex; align-items: baseline; gap: 4px; font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: #fff; transition: color 0.4s var(--ease); }
+.brand { display: flex; align-items: center; gap: 4px; font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: #fff; transition: color 0.4s var(--ease); }
 .nav.scrolled .brand { color: var(--color-fg); }
 .brand b { color: var(--color-primary); }
+.brand-logo { height: 46px; width: auto; display: block; transition: height 0.4s var(--ease); }
+.nav.scrolled .brand-logo { height: 38px; }
+.footer .brand-logo { height: 62px; }
+@media (max-width: 560px) { .brand-logo { height: 38px; } }
 .brand em { font-style: normal; font-family: var(--font-body); font-size: 0.6rem; letter-spacing: 0.35em;
   text-transform: uppercase; color: var(--color-accent); align-self: center; margin-left: 6px; }
 
