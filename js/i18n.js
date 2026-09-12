@@ -14,15 +14,15 @@ window.I18N = {
     "brand.tag": "Kebap Evi",
 
     // Hero
-    "hero.eyebrow": "1974'ten Bu Yana Odun Ateşinde",
-    "hero.title": "Ustanın Elinden, <em>Közün</em> Sofraya",
-    "hero.sub": "Anadolu'nun köklü lezzet geleneğini, seçkin etleri ve açık ateşin sıcaklığını modern bir sofrada buluşturuyoruz.",
+    "hero.eyebrow": "Malatya · Etin Lezzet Ustası",
+    "hero.title": "Kebabın <em>Doğru</em> Adresi",
+    "hero.sub": "Zeki Tuna'dan Nadi Tuna'ya; babadan oğula taşınan ustalıkla, köz ateşinde bıçak kıyma kebabın gerçek lezzeti.",
     "hero.cta1": "Menüyü Keşfet",
     "hero.cta2": "Yol Tarifi Al",
     "hero.scroll": "Kaydır",
-    "hero.badge1": "Yıllık Ustalık",
-    "hero.badge2": "İmza Lezzet",
-    "hero.badge3": "Memnun Misafir",
+    "hero.badge1": "Ateşinde Pişer",
+    "hero.badge2": "Kıyma Dana",
+    "hero.badge3": "Marka",
 
     // Features
     "feat.eyebrow": "Neden Çobanoğlu",
@@ -32,15 +32,15 @@ window.I18N = {
     "feat.2.t": "Günlük Taze Et",
     "feat.2.d": "Seçkin çiftliklerden gelen etler her sabah özenle ayıklanır, elde yoğrulur ve aynı gün servis edilir.",
     "feat.3.t": "Köklü Reçeteler",
-    "feat.3.d": "Üç kuşaktır değişmeyen baharat harmanı ve el emeği; her tabakta aynı özenli miras.",
+    "feat.3.d": "Babadan oğula taşınan baharat harmanı ve el emeği; her tabakta aynı özenli miras.",
 
     // Story
     "story.eyebrow": "Hikayemiz",
-    "story.title": "Yarım Asırlık Bir <span class='text-accent'>Lezzet Yolculuğu</span>",
-    "story.p1": "Çobanoğlu, 1974 yılında küçük bir ocakbaşıyla yola çıktı. Dedemizin köz üzerinde çevirdiği ilk şişten bugüne, tek bir şey hiç değişmedi: işi hakkını vererek yapmak.",
-    "story.p2": "Bugün üçüncü kuşak olarak aynı ateşi, aynı özeni ve aynı misafirperverliği sürdürüyoruz. Her misafirimiz bizim için sofraya davet ettiğimiz bir dost.",
+    "story.title": "Babadan Oğula Bir <span class='text-accent'>Lezzet Mirası</span>",
+    "story.p1": "Çobanoğlu Kebap, lezzeti bir aile mirası olarak görür. Zeki Tuna'nın ocağında başlayan bu yolculuk, bugün oğlu Nadi Tuna'nın elinde aynı özenle sürüyor.",
+    "story.p2": "Günlük taze dana, bıçakla kıyılan et ve köz ateşi... Tescilli markamızla Malatya Yeşilyurt'ta sofranızdayız.",
     "story.sign": "— Çobanoğlu Ailesi",
-    "story.exp": "Yıllık Tecrübe",
+    "story.exp": "Kuşak Ustalık",
     "story.more": "Hikayemizin Devamı",
 
     // Dishes
@@ -77,7 +77,7 @@ window.I18N = {
 
     // About page
     "about.eyebrow": "Hakkımızda",
-    "about.title": "Ateşe ve Emeğe Adanmış Bir Ömür",
+    "about.title": "Ateşe ve Emeğe Adanmış Bir Aile",
     "about.sub": "Küçük bir ocakbaşından köklü bir lezzet markasına uzanan yolculuğumuz.",
     "about.v.eyebrow": "Değerlerimiz",
     "about.v.title": "Bizi Biz Yapan İlkeler",
@@ -118,7 +118,7 @@ window.I18N = {
     "cta.dir": "Yol Tarifi",
 
     // Footer
-    "foot.about": "1974'ten bu yana odun ateşinde, ustanın elinden gelen gerçek kebap lezzeti.",
+    "foot.about": "Etin Lezzet Ustası · Malatya Yeşilyurt'ta, babadan oğula taşınan bıçak kıyma kebabın gerçek lezzeti.",
     "foot.explore": "Keşfet",
     "foot.contact": "İletişim",
     "foot.hours": "Saatler",
@@ -135,15 +135,15 @@ window.I18N = {
     "nav.reserve": "Call Us",
     "brand.tag": "Kebab House",
 
-    "hero.eyebrow": "Over Wood Fire Since 1974",
-    "hero.title": "From the Master's Hand, <em>Embers</em> to Your Table",
-    "hero.sub": "We bring Anatolia's deep-rooted culinary heritage, prime cuts and the warmth of an open flame together at a modern table.",
+    "hero.eyebrow": "Malatya · The Master of Meat's Flavor",
+    "hero.title": "The <em>Right</em> Address for Kebab",
+    "hero.sub": "Craftsmanship passed from father to son — the true taste of knife-minced kebab over charcoal.",
     "hero.cta1": "Explore the Menu",
     "hero.cta2": "Get Directions",
     "hero.scroll": "Scroll",
-    "hero.badge1": "Years of Mastery",
-    "hero.badge2": "Signature Dishes",
-    "hero.badge3": "Happy Guests",
+    "hero.badge1": "Over Charcoal",
+    "hero.badge2": "Knife-Minced",
+    "hero.badge3": "Brand",
 
     "feat.eyebrow": "Why Çobanoğlu",
     "feat.title": "Quality You Taste in a Single Bite",
@@ -152,14 +152,14 @@ window.I18N = {
     "feat.2.t": "Fresh Daily Meat",
     "feat.2.d": "Meat from select farms is trimmed each morning, hand-kneaded and served the same day.",
     "feat.3.t": "Time-Honored Recipes",
-    "feat.3.d": "A spice blend unchanged for three generations and true craftsmanship in every plate.",
+    "feat.3.d": "A spice blend passed from father to son and true craftsmanship in every plate.",
 
     "story.eyebrow": "Our Story",
-    "story.title": "A Half-Century <span class='text-accent'>Journey of Flavor</span>",
-    "story.p1": "Çobanoğlu began in 1974 with a small grill. From our grandfather's first skewer turned over embers to today, one thing never changed: doing the work right.",
-    "story.p2": "Today, as the third generation, we carry on the same fire, the same care and the same hospitality. Every guest is a friend we've invited to our table.",
+    "story.title": "A Family <span class='text-accent'>Legacy of Flavor</span>",
+    "story.p1": "At Çobanoğlu Kebap, flavor is a family heritage. The journey that began at Zeki Tuna's grill continues today in the hands of his son, Nadi Tuna.",
+    "story.p2": "Fresh daily beef, knife-minced meat and a charcoal fire... A registered brand, at your table in Yeşilyurt, Malatya.",
     "story.sign": "— The Çobanoğlu Family",
-    "story.exp": "Years of Experience",
+    "story.exp": "Generations of Mastery",
     "story.more": "Read Our Full Story",
 
     "dish.eyebrow": "Signature Dishes",
@@ -229,7 +229,7 @@ window.I18N = {
     "cta.call": "Call Now",
     "cta.dir": "Directions",
 
-    "foot.about": "Real kebab flavor from the master's hand, over wood fire since 1974.",
+    "foot.about": "The Master of Meat's Flavor · real knife-minced kebab in Yeşilyurt, Malatya, passed from father to son.",
     "foot.explore": "Explore",
     "foot.contact": "Contact",
     "foot.hours": "Hours",
