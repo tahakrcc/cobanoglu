@@ -43,7 +43,8 @@
     const sec = document.querySelector(".hero"); if (!sec) return;
     const set = (sel, val, html) => { const el = sec.querySelector(sel); if (el && val != null && val !== "") { html ? (el.innerHTML = val) : (el.textContent = val); } };
     set(".eyebrow", lang() === "en" ? hero.eyebrow_en : hero.eyebrow_tr);
-    set("h1", lang() === "en" ? hero.title_en : hero.title_tr, true);
+    const title = (lang() === "en" ? hero.title_en : hero.title_tr) || "";
+    set("h1", emphasize(title), true);
     set(".hero-inner p", lang() === "en" ? hero.sub_en : hero.sub_tr);
     const media = sec.querySelector(".hero-media");
     if (media && hero.images && hero.images.length) {
@@ -193,6 +194,11 @@
   }
 
   function escapeHtml(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+  // *kelime* -> vurgulu (kırmızı italik). Eski <em>kelime</em> de çalışır.
+  function emphasize(s) {
+    return String(s == null ? "" : s)
+      .replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  }
 
   // dil değişince yeniden render (i18n'den SONRA çalışır)
   document.addEventListener("langchange", () => { if (Object.keys(cache).length) render(); });

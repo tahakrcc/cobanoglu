@@ -209,7 +209,7 @@
         <div class="field"><label>Üst etiket (TR)</label><input type="text" id="h_eb_tr" value="${esc(hero.eyebrow_tr)}"></div>
         <div class="field"><label>Üst etiket (EN)</label><input type="text" id="h_eb_en" value="${esc(hero.eyebrow_en)}"></div>
       </div>
-      <div class="field"><label>Başlık (TR) <span class="hint">vurgulu kelime için &lt;em&gt;kelime&lt;/em&gt;</span></label><input type="text" id="h_t_tr" value="${esc(hero.title_tr)}"></div>
+      <div class="field"><label>Başlık (TR) <span class="hint">vurgulamak istediğin kelimeyi *yıldız* içine al — örn. *Közün*</span></label><input type="text" id="h_t_tr" value="${esc(hero.title_tr)}"></div>
       <div class="field"><label>Başlık (EN)</label><input type="text" id="h_t_en" value="${esc(hero.title_en)}"></div>
       <div class="field"><label>Alt metin (TR)</label><textarea id="h_s_tr">${esc(hero.sub_tr)}</textarea></div>
       <div class="field"><label>Alt metin (EN)</label><textarea id="h_s_en">${esc(hero.sub_en)}</textarea></div>
