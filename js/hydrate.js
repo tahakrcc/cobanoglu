@@ -20,21 +20,56 @@
   let cache = {};
 
   async function hydrateAll() {
-    const [settings, dishes, menu, gallery, videos] = await Promise.all([
-      CBG.getSettings(), CBG.getHomeDishes(), CBG.getMenu(), CBG.getGallery(), CBG.getVideos(),
+    const [settings, dishes, menu, gallery, videos, reviews] = await Promise.all([
+      CBG.getSettings(), CBG.getHomeDishes(), CBG.getMenu(), CBG.getGallery(), CBG.getVideos(), CBG.getReviews(),
     ]);
-    cache = { settings, dishes, menu, gallery, videos };
+    cache = { settings, dishes, menu, gallery, videos, reviews };
     render();
   }
 
   function render() {
-    const { settings, dishes, menu, gallery, videos } = cache;
+    const { settings, dishes, menu, gallery, videos, reviews } = cache;
     if (settings) { renderHero(settings.hero); renderStory(settings.story); renderStats(settings.stats); renderContact(settings.contact); }
     if (dishes) renderDishes(dishes);
     if (menu) renderMenu(menu);
     if (gallery) renderGallery(gallery);
     if (videos) renderVideos(videos);
+    if (reviews) renderReviews(reviews, settings && settings.reviews);
     document.dispatchEvent(new CustomEvent("cbg-refresh-counters"));
+  }
+
+  // ---------- REVIEWS (Google yorumları) ----------
+  function stars(n) { n = Math.round(n) || 0; return "★★★★★".slice(0, n) + "☆☆☆☆☆".slice(0, 5 - n); }
+  function renderReviews(reviews, meta) {
+    const sec = document.getElementById("reviews"); if (!sec) return;
+    const grid = document.getElementById("reviews-grid");
+    if (!reviews.length) { sec.hidden = true; return; }
+    sec.hidden = false;
+    grid.innerHTML = "";
+    reviews.forEach((r) => {
+      const card = document.createElement("article"); card.className = "review-card";
+      const initial = (r.author || "?").trim().charAt(0).toUpperCase();
+      const avatar = r.avatar_url
+        ? `<div class="review-avatar"><img src="${escapeHtml(r.avatar_url)}" alt=""></div>`
+        : `<div class="review-avatar">${escapeHtml(initial)}</div>`;
+      card.innerHTML = `
+        <div class="review-top">${avatar}
+          <div class="review-who"><b>${escapeHtml(r.author)}</b><small>${escapeHtml(r.date_label || "")}</small></div>
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-1.9 3.2-4.8 3.2-7.8Z"/><path fill="#34A853" d="M12 23c2.9 0 5.4-1 7.2-2.6l-3.6-2.7c-1 .7-2.3 1.1-3.6 1.1-2.8 0-5.1-1.9-6-4.4H2.3v2.8A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M6 14.4a6.6 6.6 0 0 1 0-4.2V7.4H2.3a11 11 0 0 0 0 9.8L6 14.4Z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .5 4.1 1.6l3.1-3.1A11 11 0 0 0 2.3 7.4L6 10.2c.9-2.6 3.2-4.8 6-4.8Z"/></svg>
+        </div>
+        <div class="review-stars">${stars(r.rating)}</div>
+        <div class="review-text">${escapeHtml(T(r, "text"))}</div>`;
+      grid.appendChild(card);
+    });
+    // Google rozeti + buton
+    meta = meta || {};
+    const badge = document.getElementById("google-badge");
+    if (meta.rating) { document.getElementById("g-score").textContent = meta.rating; document.getElementById("g-stars").textContent = stars(parseFloat(String(meta.rating).replace(",", "."))); }
+    const cnt = document.getElementById("g-count");
+    cnt.textContent = meta.count ? (lang() === "en" ? meta.count + " reviews" : meta.count + " yorum") : "";
+    badge.hidden = !meta.rating;
+    const cta = document.getElementById("reviews-cta");
+    if (meta.google_url) { cta.href = meta.google_url; cta.hidden = false; } else { cta.hidden = true; }
   }
 
   // ---------- HERO ----------

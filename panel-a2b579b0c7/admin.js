@@ -502,6 +502,75 @@
     load();
   };
 
+  // ---------- YORUMLAR (Google) ----------
+  TABS.yorumlar = async (root) => {
+    root.innerHTML = head("Yorumlar", "Google yorumlarını ekle. Lütfen yalnızca gerçek yorumları koy.");
+    const meta = await getSetting("reviews");
+    const card = document.createElement("div"); card.className = "card";
+    card.innerHTML = `<h3>Google Bilgileri</h3>
+      <div class="grid2">
+        <div class="field"><label>Google puanı <span class="hint">örn. 4,8</span></label><input type="text" id="rv_rating" value="${esc(meta.rating)}"></div>
+        <div class="field"><label>Yorum sayısı <span class="hint">örn. 250+</span></label><input type="text" id="rv_count" value="${esc(meta.count)}"></div>
+      </div>
+      <div class="field"><label>Google profil / yorum linki <span class="hint">"Google'da Tüm Yorumlar" butonu buraya gider</span></label><input type="text" id="rv_url" value="${esc(meta.google_url)}"></div>
+      <button class="btn btn-primary" id="rv_save_meta">Bilgileri Kaydet</button>`;
+    root.appendChild(card);
+    $("#rv_save_meta").addEventListener("click", async (e) => {
+      e.target.disabled = true;
+      try { await saveSetting("reviews", { google_url: $("#rv_url").value, rating: $("#rv_rating").value, count: $("#rv_count").value }); toast("Kaydedildi", "ok"); }
+      catch (err) { toast("Hata: " + err.message, "err"); }
+      e.target.disabled = false;
+    });
+
+    const bar = document.createElement("div"); bar.style.margin = "18px 0";
+    bar.innerHTML = `<button class="btn btn-primary" id="rv-add">+ Yeni Yorum</button>`;
+    root.appendChild(bar);
+    const listEl = document.createElement("div"); root.appendChild(listEl);
+
+    async function load() {
+      const { data } = await sb.from("reviews").select("*").order("sort").order("created_at");
+      const rows = data || [];
+      if (!rows.length) { listEl.innerHTML = `<div class="empty">Henüz yorum yok. Google'dan gerçek yorumları ekle.</div>`; return; }
+      listEl.innerHTML = "";
+      rows.forEach((r) => {
+        const item = document.createElement("div"); item.className = "item";
+        const av = r.avatar_url ? `<div class="thumbs"><div class="thumb"><img src="${esc(r.avatar_url)}"></div></div>` : `<div class="thumbs"></div>`;
+        item.innerHTML = `${av}<div class="body"><h4>${esc(r.author)} <span style="color:#f5b301">${"★".repeat(r.rating || 0)}</span></h4><div class="meta">${esc(r.date_label || "")}</div><p style="color:var(--muted);font-size:.9rem">${esc((r.text_tr || "").slice(0, 120))}</p></div>`;
+        const acts = document.createElement("div"); acts.className = "row-actions";
+        const ed = document.createElement("button"); ed.className = "btn btn-ghost btn-sm"; ed.textContent = "Düzenle"; ed.addEventListener("click", () => editor(r));
+        const del = document.createElement("button"); del.className = "btn btn-danger btn-sm"; del.textContent = "Sil"; del.addEventListener("click", async () => { if (!confirm("Silinsin mi?")) return; await sb.from("reviews").delete().eq("id", r.id); toast("Silindi", "ok"); load(); });
+        acts.appendChild(ed); acts.appendChild(del); item.querySelector(".body").appendChild(acts); listEl.appendChild(item);
+      });
+    }
+    function editor(row) {
+      const isNew = !row; const d = Object.assign({ author: "", rating: 5, text_tr: "", text_en: "", date_label: "", avatar_url: "", sort: 0 }, row || {});
+      const avatar = [d.avatar_url].filter(Boolean);
+      openModal(`<h3>${isNew ? "Yeni Yorum" : "Yorum Düzenle"}</h3>
+        <div class="grid2">
+          <div class="field"><label>İsim</label><input type="text" id="rv_author" value="${esc(d.author)}"></div>
+          <div class="field"><label>Puan</label><select id="rv_star">${[5, 4, 3, 2, 1].map((n) => `<option value="${n}" ${d.rating == n ? "selected" : ""}>${"★".repeat(n)} (${n})</option>`).join("")}</select></div>
+          <div class="field"><label>Tarih <span class="hint">örn. 2 hafta önce</span></label><input type="text" id="rv_date" value="${esc(d.date_label)}"></div>
+          <div class="field"><label>Sıra</label><input type="number" id="rv_sort" value="${esc(d.sort)}"></div>
+        </div>
+        <div class="field"><label>Yorum (TR)</label><textarea id="rv_ttr">${esc(d.text_tr)}</textarea></div>
+        <div class="field"><label>Yorum (EN) <span class="hint">boş bırakılabilir</span></label><textarea id="rv_ten">${esc(d.text_en)}</textarea></div>
+        <div class="field"><label>Profil fotoğrafı (opsiyonel)</label><div id="rv_avatar"></div></div>
+        <div class="modal-foot"><button class="btn btn-ghost" id="rv_cancel">İptal</button><button class="btn btn-primary" id="rv_save">Kaydet</button></div>`);
+      $("#rv_avatar").appendChild(imageEditor(avatar, "reviews", { single: true }));
+      $("#rv_cancel").addEventListener("click", closeModal);
+      $("#rv_save").addEventListener("click", async (e) => {
+        e.target.disabled = true;
+        const payload = { author: $("#rv_author").value, rating: +$("#rv_star").value || 5, text_tr: $("#rv_ttr").value, text_en: $("#rv_ten").value, date_label: $("#rv_date").value, avatar_url: avatar[0] || "", sort: +$("#rv_sort").value || 0 };
+        const res = isNew ? await sb.from("reviews").insert(payload) : await sb.from("reviews").update(payload).eq("id", row.id);
+        e.target.disabled = false;
+        if (res.error) return toast("Hata: " + res.error.message, "err");
+        toast("Kaydedildi", "ok"); closeModal(); load();
+      });
+    }
+    $("#rv-add").addEventListener("click", () => editor(null));
+    load();
+  };
+
   // ---------- Başlat ----------
   sb.auth.onAuthStateChange((_e, session) => { if (!session) showLogin(); });
   refreshAuth();

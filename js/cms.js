@@ -62,5 +62,11 @@ window.CBG = (function () {
     return data || [];
   }
 
-  return { db, lang, pick, getSettings, getMenu, getHomeDishes, getGallery, getVideos, ready: () => !!window.CBG_READY };
+  async function getReviews() {
+    const c = db(); if (!c) return null;
+    const { data } = await c.from("reviews").select("*").order("sort").order("created_at");
+    return data || [];
+  }
+
+  return { db, lang, pick, getSettings, getMenu, getHomeDishes, getGallery, getVideos, getReviews, ready: () => !!window.CBG_READY };
 })();

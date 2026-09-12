@@ -212,6 +212,34 @@ on conflict (slug) do nothing;
 -- (İstersen mevcut örnek ürünleri de buraya seed olarak ekleyebiliriz.)
 
 -- ============================================================
+-- 7) YORUMLAR (Google yorumları — panelden yönetilir)
+-- ============================================================
+create table if not exists public.reviews (
+  id          uuid primary key default gen_random_uuid(),
+  author      text not null,
+  rating      int  not null default 5,
+  text_tr     text not null default '',
+  text_en     text not null default '',
+  date_label  text not null default '',
+  avatar_url  text not null default '',
+  sort        int  not null default 0,
+  created_at  timestamptz not null default now()
+);
+alter table public.reviews enable row level security;
+drop policy if exists "public_read" on public.reviews;
+create policy "public_read" on public.reviews for select using (true);
+drop policy if exists "auth_insert" on public.reviews;
+create policy "auth_insert" on public.reviews for insert to authenticated with check (true);
+drop policy if exists "auth_update" on public.reviews;
+create policy "auth_update" on public.reviews for update to authenticated using (true) with check (true);
+drop policy if exists "auth_delete" on public.reviews;
+create policy "auth_delete" on public.reviews for delete to authenticated using (true);
+
+insert into public.settings (key, value) values
+('reviews', '{"google_url":"","rating":"","count":""}'::jsonb)
+on conflict (key) do nothing;
+
+-- ============================================================
 -- BİTTİ. Sonraki adım: Authentication → Users → admin kullanıcısı ekle,
 -- ve Authentication → Providers → Email → "Allow new users to sign up" KAPAT.
 -- ============================================================

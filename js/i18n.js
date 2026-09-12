@@ -117,6 +117,11 @@ window.I18N = {
     "cta.call": "Hemen Ara",
     "cta.dir": "Yol Tarifi",
 
+    // Yorumlar
+    "rev.eyebrow": "Misafir Yorumları",
+    "rev.title": "Google'da Bizi Değerlendirenler",
+    "rev.cta": "Google'da Tüm Yorumlar",
+
     // Footer
     "foot.about": "Etin Lezzet Ustası · Malatya Yeşilyurt'ta, babadan oğula taşınan bıçak kıyma kebabın gerçek lezzeti.",
     "foot.explore": "Keşfet",
@@ -228,6 +233,10 @@ window.I18N = {
     "cta.sub": "Call us for a reservation or simply drop by. The table is ready.",
     "cta.call": "Call Now",
     "cta.dir": "Directions",
+
+    "rev.eyebrow": "Guest Reviews",
+    "rev.title": "What Our Guests Say on Google",
+    "rev.cta": "See All Reviews on Google",
 
     "foot.about": "The Master of Meat's Flavor · real knife-minced kebab in Yeşilyurt, Malatya, passed from father to son.",
     "foot.explore": "Explore",
