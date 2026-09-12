@@ -2,7 +2,7 @@
 
 Saf HTML + CSS + JS frontend + **Supabase** (içerik yönetimi). TR + EN çift dilli, çok sayfalı.
 Üst düzey efektler: loading ekranı, scroll reveal, kart stagger, parallax, sayaç animasyonu, galeri lightbox, çoklu foto slider.
-Yönetim paneli (`/admin`) ile menü, galeri, video, foto ve metinler düzenlenebilir.
+Yönetim paneli (gizli adres — `SECRETS.local.md`'de) ile menü, galeri, video, foto ve metinler düzenlenebilir.
 
 ---
 
@@ -35,7 +35,7 @@ Supabase → **Authentication → Users → Add user** → e-posta + şifre gir 
 Ardından **Authentication → Providers → Email** → "Allow new users to sign up" seçeneğini **KAPAT** (dışarıdan kayıt olunmasın).
 
 ### 5) Giriş
-`https://siten.vercel.app/admin/` adresine git → e-posta + şifre ile gir.
+Gizli panel adresine git (adres `SECRETS.local.md` içinde tutulur) → e-posta + şifre ile gir.
 Sekmeler: **Genel · Anasayfa · Menü · İmza Lezzetler · Galeri · Video**. Foto/video sürükle-yükle, metinleri düzenle, kaydet → site anında güncellenir.
 
 > **Slider:** Bir ürüne/karta/galeri kutusuna 2+ foto eklersen otomatik dönen slider olur.

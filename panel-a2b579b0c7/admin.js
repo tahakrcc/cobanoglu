@@ -5,10 +5,26 @@
   "use strict";
 
   // ---------- Yapılandırma kontrolü ----------
-  if (!window.CBG_READY || !window.supabase) {
+  if (!window.CBG_READY) {
     document.getElementById("config-warn").hidden = false;
     return;
   }
+  // Supabase kütüphanesi CDN'den geç gelebilir — bekle, hemen "config eksik" deme
+  if (!window.supabase) {
+    let n = 0;
+    const t = setInterval(() => {
+      if (window.supabase) { clearInterval(t); init(); }
+      else if (++n > 50) {
+        clearInterval(t);
+        const w = document.getElementById("config-warn"); w.hidden = false;
+        w.querySelector(".msg").innerHTML = "Bağlantı kütüphanesi yüklenemedi. İnternet bağlantını kontrol edip sayfayı yenile.";
+      }
+    }, 100);
+    return;
+  }
+  init();
+
+  function init() {
   const sb = window.supabase.createClient(
     window.CBG_CONFIG.SUPABASE_URL,
     window.CBG_CONFIG.SUPABASE_ANON_KEY
@@ -474,4 +490,5 @@
   // ---------- Başlat ----------
   sb.auth.onAuthStateChange((_e, session) => { if (!session) showLogin(); });
   refreshAuth();
+  } // init sonu
 })();

@@ -130,6 +130,7 @@
   // ---------- MENU ----------
   function renderMenu(menu) {
     const list = document.querySelector(".menu-list"); if (!list) return;
+    if (!menu.items || !menu.items.length) return; // ürün yoksa statik menüyü koru
     const filters = document.querySelector(".menu-filters");
     const catById = {}; menu.categories.forEach((c) => (catById[c.id] = c));
     // filtre butonlarını yeniden kur

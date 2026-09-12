@@ -10,6 +10,7 @@
   --head: "Playfair Display", Georgia, serif;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
 body { font-family: var(--font); background: var(--bg); color: var(--fg); font-size: 15px; line-height: 1.5; }
 a { color: var(--p); }
 img { max-width: 100%; display: block; }

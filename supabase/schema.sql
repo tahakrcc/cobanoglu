@@ -190,10 +190,10 @@ insert into public.settings (key, value) values
   "images": []
 }'::jsonb),
 ('story', '{
-  "p1_tr": "Çobanoğlu, 1974 yılında küçük bir ocakbaşıyla yola çıktı...",
-  "p1_en": "Çobanoğlu began in 1974 with a small grill...",
-  "p2_tr": "Bugün üçüncü kuşak olarak aynı ateşi sürdürüyoruz.",
-  "p2_en": "Today, as the third generation, we carry on the same fire.",
+  "p1_tr": "Çobanoğlu, 1974 yılında küçük bir ocakbaşıyla yola çıktı. Dedemizin köz üzerinde çevirdiği ilk şişten bugüne, tek bir şey hiç değişmedi: işi hakkını vererek yapmak.",
+  "p1_en": "Çobanoğlu began in 1974 with a small grill. From our grandfather''s first skewer turned over embers to today, one thing never changed: doing the work right.",
+  "p2_tr": "Bugün üçüncü kuşak olarak aynı ateşi, aynı özeni ve aynı misafirperverliği sürdürüyoruz. Her misafirimiz bizim için sofraya davet ettiğimiz bir dost.",
+  "p2_en": "Today, as the third generation, we carry on the same fire, the same care and the same hospitality. Every guest is a friend we''ve invited to our table.",
   "images": []
 }'::jsonb),
 ('stats', '{
