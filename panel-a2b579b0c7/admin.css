@@ -56,6 +56,14 @@ input[type=text], input[type=email], input[type=password], input[type=number], t
 input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p); }
 textarea { resize: vertical; min-height: 90px; }
 
+/* Şifre göster/gizle */
+.pw-wrap { position: relative; }
+.pw-wrap input { padding-right: 46px; }
+.pw-toggle { position: absolute; top: 50%; right: 6px; transform: translateY(-50%); width: 34px; height: 34px;
+  display: grid; place-items: center; border: none; background: none; color: var(--muted); border-radius: 8px; }
+.pw-toggle:hover { color: var(--p); background: var(--bg); }
+.pw-toggle svg { width: 20px; height: 20px; }
+
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 20px; border: none; border-radius: 10px; font-weight: 700; font-size: 0.9rem; transition: all 0.2s; }
 .btn-primary { background: var(--p); color: #fff; }
 .btn-primary:hover { background: var(--p-dark); }

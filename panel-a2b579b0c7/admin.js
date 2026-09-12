@@ -4,6 +4,21 @@
 (function () {
   "use strict";
 
+  // ---------- Şifre göster/gizle (config'ten bağımsız) ----------
+  (function () {
+    var t = document.getElementById("pw-toggle"), p = document.getElementById("password");
+    if (!t || !p) return;
+    t.addEventListener("click", function () {
+      var show = p.type === "password";
+      p.type = show ? "text" : "password";
+      t.querySelector(".eye").hidden = show;
+      t.querySelector(".eye-off").hidden = !show;
+      t.setAttribute("aria-label", show ? "Şifreyi gizle" : "Şifreyi göster");
+      t.title = show ? "Şifreyi gizle" : "Şifreyi göster";
+      p.focus();
+    });
+  })();
+
   // ---------- Yapılandırma kontrolü ----------
   if (!window.CBG_READY) {
     document.getElementById("config-warn").hidden = false;
