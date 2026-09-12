@@ -5,8 +5,8 @@
    Project Settings → API sayfasından al.
    ============================================================ */
 window.CBG_CONFIG = {
-  SUPABASE_URL: "",       // örn: https://xxxxxxxx.supabase.co
-  SUPABASE_ANON_KEY: "",  // "anon public" anahtarı
+  SUPABASE_URL: "https://sxfczfufmfozvwnenxob.supabase.co",
+  SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN4ZmN6ZnVmbWZvenZ3bmVueG9iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkyMTcwMDUsImV4cCI6MjEwNDc5MzAwNX0.7xP1NlpK-0G3lj_TAwDNjxni2tQnnvcF2zemvxjDaWI", // anon public (JWT) — güvenli
 };
 
 /* Yapılandırma dolu mu? (boşsa site statik varsayılan içerikle çalışır) */
