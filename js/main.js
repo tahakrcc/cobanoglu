@@ -200,6 +200,9 @@
   if (loader) document.addEventListener("loaded", initAnimations, { once: true });
   else document.addEventListener("DOMContentLoaded", initAnimations);
 
+  // Hydration sayaç değerlerini güncelleyince yeniden say
+  document.addEventListener("cbg-refresh-counters", () => initCounters(!!(window.gsap && window.ScrollTrigger)));
+
   /* ---------------------------------------------------------
      6) MENÜ FİLTRESİ
      --------------------------------------------------------- */
@@ -225,13 +228,19 @@
   const lb = document.getElementById("lightbox");
   if (gallery && lb) {
     const lbImg = lb.querySelector("img");
-    const imgs = Array.from(gallery.querySelectorAll("img"));
-    let idx = 0;
+    let imgs = [], idx = 0;
+    const refresh = () => { imgs = Array.from(gallery.querySelectorAll("img")); };
+    refresh();
     const open = (i) => { idx = i; lbImg.src = imgs[idx].src; lbImg.alt = imgs[idx].alt || ""; lb.classList.add("open"); document.body.classList.add("no-scroll"); };
     const close = () => { lb.classList.remove("open"); document.body.classList.remove("no-scroll"); };
     const move = (d) => { idx = (idx + d + imgs.length) % imgs.length; lbImg.src = imgs[idx].src; lbImg.alt = imgs[idx].alt || ""; };
 
-    imgs.forEach((img, i) => img.closest("figure").addEventListener("click", () => open(i)));
+    // olay delegasyonu — galeri sonradan yeniden kurulsa da çalışır
+    gallery.addEventListener("click", (e) => {
+      const fig = e.target.closest("figure"); if (!fig) return;
+      refresh(); const i = imgs.indexOf(fig.querySelector("img")); if (i >= 0) open(i);
+    });
+    document.addEventListener("gallery-rebuilt", refresh);
     lb.querySelector(".lb-close").addEventListener("click", close);
     lb.querySelector(".lb-prev").addEventListener("click", (e) => { e.stopPropagation(); move(-1); });
     lb.querySelector(".lb-next").addEventListener("click", (e) => { e.stopPropagation(); move(1); });

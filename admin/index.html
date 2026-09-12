@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Yönetim Paneli — Çobanoğlu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- Yapılandırma uyarısı -->
+  <div id="config-warn" class="login-wrap" hidden>
+    <div class="login-card">
+      <div class="brand"><b>Çoban</b>oğlu</div>
+      <div class="sub">Yönetim Paneli</div>
+      <div class="msg err">Supabase yapılandırması eksik. <code>js/config.js</code> dosyasına Supabase <b>URL</b> ve <b>anon key</b> değerlerini gir.</div>
+    </div>
+  </div>
+
+  <!-- GİRİŞ -->
+  <div id="login" class="login-wrap" hidden>
+    <form class="login-card" id="login-form">
+      <div class="brand"><b>Çoban</b>oğlu</div>
+      <div class="sub">Yönetim Paneli · Giriş</div>
+      <div id="login-msg"></div>
+      <div class="field">
+        <label for="email">E-posta</label>
+        <input type="email" id="email" autocomplete="username" required />
+      </div>
+      <div class="field">
+        <label for="password">Şifre</label>
+        <input type="password" id="password" autocomplete="current-password" required />
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center" id="login-btn">Giriş Yap</button>
+    </form>
+  </div>
+
+  <!-- UYGULAMA -->
+  <div id="app" hidden>
+    <div class="topbar">
+      <div class="brand"><b>Çoban</b>oğlu · Yönetim</div>
+      <div class="right">
+        <a class="view-site" href="../index.html" target="_blank" rel="noopener">Siteyi Gör ↗</a>
+        <span id="who"></span>
+        <button class="btn btn-ghost btn-sm" id="logout">Çıkış</button>
+      </div>
+    </div>
+    <div class="layout">
+      <nav class="sidebar" id="tabs">
+        <button data-tab="genel" class="active">Genel Bilgiler</button>
+        <button data-tab="anasayfa">Anasayfa</button>
+        <button data-tab="menu">Menü</button>
+        <button data-tab="lezzetler">İmza Lezzetler</button>
+        <button data-tab="galeri">Galeri</button>
+        <button data-tab="video">Video</button>
+      </nav>
+      <main class="content" id="panel"></main>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-back" id="modal-back"><div class="modal" id="modal"></div></div>
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
