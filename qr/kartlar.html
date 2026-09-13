@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Çobanoğlu Kebap — QR Kartları</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --red:#B91C1C; --bordo:#450A0A; --gold:#A16207; --ink:#1a0808; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Karla", sans-serif; background: #ece7e2; color: var(--ink); padding: 24px; }
+  .sheet { max-width: 820px; margin: 0 auto; }
+  .hint { text-align:center; color:#6b5c5c; font-size:.9rem; margin-bottom:18px; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card { background:#fff; border:2px solid #f0dede; border-radius:22px; padding:26px 20px 28px; text-align:center;
+          box-shadow:0 10px 30px rgba(69,10,10,.08); display:flex; flex-direction:column; align-items:center; }
+  .card .logo { height:52px; margin-bottom:6px; }
+  .card .kind { font-family:"Playfair Display",serif; font-size:1.5rem; color:var(--red); margin:8px 0 2px; }
+  .card .desc { color:#6b5c5c; font-size:.9rem; min-height:38px; }
+  .card .qr { width:100%; max-width:230px; aspect-ratio:1; margin:12px auto 10px; }
+  .card .qr img { width:100%; height:100%; }
+  .card .scan { display:inline-flex; align-items:center; gap:8px; background:var(--red); color:#fff; font-weight:700;
+                padding:9px 18px; border-radius:999px; font-size:.9rem; letter-spacing:.02em; }
+  .card .url { color:#a08b8b; font-size:.72rem; margin-top:10px; word-break:break-all; }
+  .foot { text-align:center; margin-top:22px; color:#6b5c5c; font-size:.85rem; }
+  .foot b { color:var(--red); }
+  @media print {
+    @page { size: A4; margin: 12mm; }
+    body { background:#fff; padding:0; }
+    .hint, .noprint { display:none !important; }
+    .card { border:1px dashed #e3c9c9; box-shadow:none; break-inside:avoid; }
+  }
+  @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <p class="hint noprint">Yazdırmak için: ⌘/Ctrl + P → A4. Kartları kesip masaya koyabilirsin.</p>
+    <div class="cards">
+      <div class="card">
+        <img class="logo" src="../assets/img/logo-transparent.png" alt="Çobanoğlu Kebap" />
+        <div class="kind">Web Sitemiz</div>
+        <div class="desc">Tüm lezzetler, galeri ve iletişim bilgileri</div>
+        <div class="qr"><img src="qr-site.png" alt="Web sitesi QR" /></div>
+        <span class="scan">📷 Okut &amp; Keşfet</span>
+        <div class="url">cobanoglukebap.com</div>
+      </div>
+      <div class="card">
+        <img class="logo" src="../assets/img/logo-transparent.png" alt="Çobanoğlu Kebap" />
+        <div class="kind">Menümüz</div>
+        <div class="desc">Menüyü telefonundan hemen incele</div>
+        <div class="qr"><img src="qr-menu.png" alt="Menü QR" /></div>
+        <span class="scan">📷 Menüyü Aç</span>
+        <div class="url">cobanoglukebap.com/menu.html</div>
+      </div>
+      <div class="card">
+        <img class="logo" src="../assets/img/logo-transparent.png" alt="Çobanoğlu Kebap" />
+        <div class="kind">Bizi Değerlendirin</div>
+        <div class="desc">Google'da bir yorum bırak, çok memnun oluruz! ⭐</div>
+        <div class="qr"><img src="qr-google.png" alt="Google değerlendirme QR" /></div>
+        <span class="scan">📷 Google'da Puan Ver</span>
+        <div class="url">Google · Çobanoğlu Kebap</div>
+      </div>
+    </div>
+    <p class="foot"><b>Çobanoğlu Kebap</b> · Etin Lezzet Ustası · Yeşilyurt / Malatya</p>
+  </div>
+</body>
+</html>
